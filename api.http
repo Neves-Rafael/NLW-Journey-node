@@ -9,4 +9,7 @@ Content-Type:application/json
   "owner_email": "rafael@gmail.com",
   "emails_to_invite": ["abc@gmail.com", "abc@gmail.com"]
 }
-'
+
+###
+
+GET http://localhost:3333/trips/605cca62-b919-4bb3-9038-336cd93a4bb3/confirm
