@@ -1,0 +1,17 @@
+POST http://localhost:3333/trips
+Content-Type:application/json
+
+{
+  "destination": "Brazil",
+  "starts_at": "2024-11-05 18:00:00",
+  "ends_at": "2024-11-05 18:00:00",
+  "owner_name": "Rafael Neves",
+  "owner_email": "rafael@gmail.com"
+}
+
+###
+{
+  "destination": "Brazil",
+  "starts_at": "2024-11-05 18:00:00",
+  "ends_at": "2024-11-46 18:00:00",
+}
