@@ -18,10 +18,13 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
+    "@fastify/cors": "^9.0.1",
     "@prisma/client": "^5.16.2",
+    "@rocketseat/eslint-config": "^2.2.2",
     "@types/nodemailer": "^6.4.15",
     "dayjs": "^1.11.11",
     "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
     "fastify": "^4.28.1",
     "fastify-type-provider-zod": "^2.0.0",
     "nodemailer": "^6.9.14",
