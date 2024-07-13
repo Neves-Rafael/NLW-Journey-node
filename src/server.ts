@@ -4,6 +4,7 @@ import { serializerCompiler, validatorCompiler } from "fastify-type-provider-zod
 import { confirmTrip } from "./routes/confirm-trip";
 import cors from "@fastify/cors";
 import { confirmParticipants } from "./routes/confirm-participant";
+import { createActivities } from "./routes/create-activity";
 
 const app = fastify();
 
@@ -18,6 +19,7 @@ app.setSerializerCompiler(serializerCompiler);
 app.register(createTrip);
 app.register(confirmTrip);
 app.register(confirmParticipants);
+app.register(createActivities);
 
 app.listen({ port: 3333, host: "0.0.0.0" }).then(() => {
   console.log("Server running in port: 3333 🔥🔥🔥");
