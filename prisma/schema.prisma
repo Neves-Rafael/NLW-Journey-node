@@ -32,3 +32,15 @@ model Participant {
 
   @@map("participants")
 }
+
+model Activity {
+  id String @id @default(uuid())
+
+  @@map("activities")
+}
+
+model Link {
+  id String @id @default(uuid())
+
+  @@map("links")
+}
