@@ -1,0 +1,12 @@
+// Create activity
+POST http://localhost:3333/trips/06864770-69de-42f0-97b6-a8bb6582c0de/activities
+Content-Type: application/json
+
+{
+  "title": "New activity",
+  "occurs_at": "2024-11-08 18:00:00"
+}
+
+### 
+// Get activities
+GET http://localhost:3333/trips/06864770-69de-42f0-97b6-a8bb6582c0de/activities
