@@ -25,3 +25,7 @@ Content-Type: application/json
 ###
 // Confirm Trip
 GET http://localhost:3333/trips/3411caac-1578-40b5-b7fa-8c1ca7f882ee/confirm
+
+###
+//Get-Trip-Details
+GET http://localhost:3333/trips/3411caac-1578-40b5-b7fa-8c1ca7f882ee

@@ -2,6 +2,11 @@
 GET http://localhost:3333/trips/3411caac-1578-40b5-b7fa-8c1ca7f882ee/participants
 
 ###
+
+// Get Participant
+GET http://localhost:3333/participants/1aa0cff1-aa02-4a99-a71f-b328621c9ee0
+
+###
 // Get Participants confirmed in trip
 GET http://localhost:3333/participants/0456dc12-90ad-4ecf-b8dc-214819145732/confirm
 
