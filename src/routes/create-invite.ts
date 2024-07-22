@@ -5,6 +5,8 @@ import { prisma } from "../lib/prisma";
 import dayjs from "dayjs";
 import { getMailClient } from "../lib/mail";
 import nodemailer from "nodemailer";
+import { ClientError } from "../errors/client-error";
+import { env } from "../utils/env";
 
 export async function createInvite(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().post(
@@ -28,7 +30,7 @@ export async function createInvite(app: FastifyInstance) {
       });
 
       if (!trip) {
-        throw new Error("Trip not found");
+        throw new ClientError("Trip not found");
       }
 
       const participant = await prisma.participant.create({
@@ -43,7 +45,7 @@ export async function createInvite(app: FastifyInstance) {
 
       const mail = await getMailClient();
 
-      const confirmationLink = `http://localhost:3333/participants/${participant.id}/confirm`;
+      const confirmationLink = `${env.API_BASE_URL}/participants/${participant.id}/confirm`;
       const message = await mail.sendMail({
         from: {
           name: "Equipe plann.er",
